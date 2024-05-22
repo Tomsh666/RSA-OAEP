@@ -26,9 +26,8 @@ def main():
         print("c2 =", c2)
 
         tmp_m = related_messages_attack(n, c1, c2, e)
-        print(tmp_m)
         if tmp_m == m:
-            print("m =",tmp_m)
+            print("m =", tmp_m)
             print("Done")
         else:
             print("Smth went wrong")
