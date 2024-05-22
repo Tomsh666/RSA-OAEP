@@ -7,6 +7,9 @@ from Crypto.Random import get_random_bytes
 def rsa_oaep():
     e = 665536
     n, e, d = generate_rsa_keys(e)
+    print("n =", n)
+    print("e =", e)
+    print("d =", d)
     while True:
         print("1.Encrypt")
         print("2.Decrypt")
@@ -14,6 +17,7 @@ def rsa_oaep():
         if choice == "1":
             file_name = "plain_text.txt"
             aes_key = get_random_bytes(32)
+            print("AES KEY =", aes_key)
             encrypt(file_name, e, n, aes_key)
             print("Done")
         elif choice == "2":
