@@ -1,6 +1,6 @@
 from Crypto.Util.number import getPrime, GCD, inverse
 from Crypto.Util import asn1
-from Crypto.Hash import SHA256, MD5
+from Crypto.Hash import SHA256, BLAKE2b
 import random
 
 from pyasn1.type import univ
@@ -47,7 +47,7 @@ def g_func(r, length):
 
 
 def h_func(x, length):
-    h = MD5.new()
+    h = BLAKE2b.new()
     h.update(x)
     return h.digest()[:length]
 
